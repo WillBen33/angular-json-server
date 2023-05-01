@@ -25,3 +25,39 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+---
+
+---
+
+## JSON Server
+
+Create a db json file :
+
+```shell
+> touch src/assets/db/db.json
+```
+
+Put some datas :
+
+```json
+{
+  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
+  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
+  "profile": { "name": "typicode" }
+}
+```
+
+Run the json server :
+
+```shell
+> json-server --watch src/assets/db/db.json
+```
+
+Now you can access to <a href="http://localhost:3000/posts/1">web browser</a> and check datas display :
+
+```json
+{ "id": 1, "title": "json-server", "author": "typicode" }
+```
+
+Json server github project : https://github.com/typicode/json-server
